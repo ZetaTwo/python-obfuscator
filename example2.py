@@ -11,12 +11,7 @@ def rc4(data, key):
         j = (j + S[i] + key[i % len(key)]) % 256
         S[j], S[i] = S[i], S[j]
 
-    print(i, j)
-
     EVIL = 0
-
-    print(i, j)
-
     for b in data:
         i = (i + 1) % 256
         j = (j + S[i]) % 256
